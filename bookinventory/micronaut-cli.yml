@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: com.micronaut.bookinventory
+---
+testFramework: junit
+sourceLanguage: java
