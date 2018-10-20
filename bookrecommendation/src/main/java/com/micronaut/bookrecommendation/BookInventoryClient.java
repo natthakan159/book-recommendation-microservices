@@ -11,5 +11,5 @@ import javax.validation.constraints.NotBlank;
 public interface BookInventoryClient extends BookInventoryOperations{
 
     @Get("/books/stock/{isbn}")
-    Maybe<Boolean> stock(@NotBlank String isbn);
+    Maybe<Boolean> stock(@NotBlank Integer isbn);
 }

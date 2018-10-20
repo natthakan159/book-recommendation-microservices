@@ -3,21 +3,21 @@ package com.micronaut.bookinventory;
 import java.util.Objects;
 
 public class BookInventory {
-    private String isbn;
+    private Integer isbn;
     private Integer stock;
 
     public BookInventory() {}
 
-    public BookInventory(String isbn, Integer stock) {
+    public BookInventory(Integer isbn, Integer stock) {
         this.isbn = isbn;
         this.stock = stock;
     }
 
-    public String getIsbn() {
+    public Integer getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(Integer isbn) {
         this.isbn = isbn;
     }
 

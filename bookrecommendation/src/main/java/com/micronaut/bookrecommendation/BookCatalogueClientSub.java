@@ -14,8 +14,8 @@ public class BookCatalogueClientSub implements BookCatalogueOperations {
 
     @Override
     public Flowable<Book> findAll() {
-        Book buildingMiroservices = new Book("1491950358", "Microservices");
-        Book releaseIt = new Book("1491950358", "Release It");
+        Book buildingMiroservices = new Book(1491950358, "Microservices");
+        Book releaseIt = new Book(1680502395, "Release It");
         return Flowable.just(buildingMiroservices, releaseIt);
     }
 }

@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Book {
     private String name;
-    private String isbn;
+    private Integer isbn;
 
     public Book() {}
 
-    public Book(String isbn, String name) {
+    public Book(Integer isbn, String name) {
         this.isbn = isbn;
         this.name = name;
     }
@@ -21,11 +21,11 @@ public class Book {
         this.name = name;
     }
 
-    public String getIsbn() {
+    public Integer getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
+    public void setIsbn(Integer isbn) {
         this.isbn = isbn;
     }
 

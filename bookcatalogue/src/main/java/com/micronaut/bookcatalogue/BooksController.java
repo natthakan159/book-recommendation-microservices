@@ -10,9 +10,9 @@ public class BooksController {
 
     @Get("/")
     List<Book> index() {
-        Book buildingMicroservices = new Book("1491950358", "Microservices");
-        Book releaseIt = new Book("1680502395", "Release It");
-        Book cideLivery = new Book("0321601912", "Continuous Delivery:");
+        Book buildingMicroservices = new Book(1491950358, "Microservices");
+        Book releaseIt = new Book(1680502395, "Release It");
+        Book cideLivery = new Book(1321601912, "Continuous Delivery:");
         return Arrays.asList(buildingMicroservices, releaseIt, cideLivery);
     }
 }

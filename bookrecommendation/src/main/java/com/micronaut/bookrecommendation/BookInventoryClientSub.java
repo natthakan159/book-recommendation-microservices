@@ -14,10 +14,10 @@ import javax.validation.constraints.NotBlank;
 public class BookInventoryClientSub implements BookInventoryOperations {
 
     @Override
-    public Maybe<Boolean> stock(@NotBlank String isbn) {
-        if (isbn.equals("1491950358")) {
+    public Maybe<Boolean> stock(@NotBlank Integer isbn) {
+        if (Integer.valueOf(1491950358).equals(isbn)) {
             return Maybe.just(Boolean.TRUE);
-        } else if (isbn.equals("1680502395")) {
+        } else if (Integer.valueOf(1680502395).equals(isbn)) {
             return Maybe.just(Boolean.FALSE);
         }
         return Maybe.empty();

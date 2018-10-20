@@ -17,14 +17,14 @@ public class BooksController {
 
     @Produces(MediaType.TEXT_PLAIN)
     @Get("/stock/{isbn}")
-    public Boolean stock(@NotBlank String isbn){
+    public Boolean stock(@NotBlank Integer isbn){
         return bookInventoryByIsbn(isbn).map(bi -> bi.getStock() >0).orElse(null);
     }
 
-    private Optional<BookInventory> bookInventoryByIsbn(String isbn) {
-        if (isbn.equals("1491950358")) {
+    private Optional<BookInventory> bookInventoryByIsbn(Integer isbn) {
+        if (Integer.valueOf(1491950358).equals(isbn)) {
             return Optional.of(new BookInventory(isbn, 4));
-        } else if (isbn.equals("1680502395")) {
+        } else if(Integer.valueOf(1680502395).equals(isbn)) {
             return Optional.of(new BookInventory(isbn, 0));
         }
         return Optional.empty();
